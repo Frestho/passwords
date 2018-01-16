@@ -30,3 +30,4 @@ while not cracked:
     #check if we got the password
     if attempt == pw:
         print("Your password was found! It is " + attempt + ", right? It took me " + attempts + " attempts to find it.")
+        unsolved = false
