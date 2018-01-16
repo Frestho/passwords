@@ -2,7 +2,10 @@ pw = input("Enter your password: ")
 cracked = false #state of password cracking
 chars = "qwertyuiopasdfghjklzxcvbnm" #all the characters the the program will try
 charOn = [-1] #holds all the character values
+attempts = 0
 while not cracked:
+    attempts += 1
+    
     #changes the right-most character of the password that is being attempted
     charOn[len(charOn) - 1] += 1
     
@@ -26,4 +29,4 @@ while not cracked:
     
     #check if we got the password
     if attempt == pw:
-        print("Your password was found! It is " + attempt + ", right?")
+        print("Your password was found! It is " + attempt + ", right? It took me " + attempts + " attempts to find it.")
