@@ -33,3 +33,6 @@ while not cracked:
     if attempt == pw:
         print("Your password was found! It is " + str(attempt) + ", right? It took me " + str(attempts) + " attempts to find it. It took " + str(round(time.time()-start, 2)) + " seconds.")
         cracked = True
+    
+    if attempts % 6000000 == 0 and not attempts == 0:
+        print("Still working, this is attempt " + str(attempts))
