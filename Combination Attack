@@ -1,5 +1,5 @@
 import time
-words = open(WORDSFILEHERE.txt).split()
+words = open(words.txt).split()
 wordOn = [-1]
 pw = input("Enter your password: ")
 start = time.time()
