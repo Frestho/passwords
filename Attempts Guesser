@@ -1,0 +1,9 @@
+charOn = []
+mode = input("Select the mode you want to test. Nothing for all lowercase, 0 for all case letters + numbers, and 1 for all characters.")
+if mode == "":
+    chars = "qwertyuiopasdfghjklzxcvbnm"
+if mode == "0":
+    chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890"
+if mode = "1":
+    chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890~!@#$%^&*()_+`-=[]\;',./{}|:\"<>?"
+pw = input("Enter your password here: ")
