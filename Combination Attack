@@ -25,4 +25,4 @@ while unsolved:
         attempt += wordOn[i]
     attempt += str(number[0])
     if attempt == pw:
-        print("Your password \"" + attempt + "\" has been found! It took " + str(attempts) + " attempts and ")
+        print("Your password \"" + attempt + "\" has been found! It took " + str(attempts) + " attempts and " + round(time.time() - start, 2) + " seconds to find your password."
