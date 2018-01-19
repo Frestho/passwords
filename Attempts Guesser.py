@@ -1,5 +1,5 @@
 charOn = []
-mode = input("Select the mode you want to test. Nothing for all lowercase, 0 for all case letters + numbers, and 1 for all characters.")
+mode = input("Select the mode you want to test. Nothing for all lowercase, 0 for all case letters + numbers, and 1 for all characters: ")
 if mode == "":
     chars = "qwertyuiopasdfghjklzxcvbnm"
 if mode == "0":
@@ -15,7 +15,7 @@ for i in range(0, len(pw)):
 
 #decode
 for i in range(0, len(charOn)):
-    attempts += charOn[i]*(26**len(charOn)-i)
+    attempts += charOn[i]*(len(chars)**len(charOn)-i)
 print("It would take " + str(attempts) + " attempts for your password to be cracked.")
 benchmark = input("To calculate how much time it would take for your password to be cracked, run my original brute force cracking program for about a minute and check the value of the attempts variable. Enter its value here: ")
 print("It would take " + str(int(benchmark) / 60 / attempts) + " seconds for your password to be cracked. This is only an approximation.")
