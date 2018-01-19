@@ -18,11 +18,11 @@ while unsolved:
     #adds another item to the end of the word list if the first word is "overflowed"
     if wordOn[0] > len(words):
         wordOn[0] = 0
-        numbers.append(0)
-    
+        numbers.append(-1)
+    numbers[len(numbers)-1] += 1
     attempt = ""
-    for i in range (0, len(wordOn) - 1):
+    for i in range (0, len(wordOn)):
         attempt += wordOn[i]
-    
+    attempt += str(number[0])
     if attempt == pw:
         print("Your password \"" + attempt + "\" has been found! It took " + str(attempts) + " attempts and ")
