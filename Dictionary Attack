@@ -9,7 +9,7 @@ attempts = 0
 unsolved = true
 while unsolved:
     wordOn[len(wordOn) - 1] += 1
-    for i in reversed(range(1, len(wordOn) - 1):
+    for i in reversed(range(1, len(wordOn)):
         if wordOn[i] > len(words):
             wordOn[i] = 0
             wordOn[i - 1] += 1
