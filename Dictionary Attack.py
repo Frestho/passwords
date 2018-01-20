@@ -1,15 +1,18 @@
 import time
-words = open(words.txt).split()
+words = open("words.txt").readlines()
+for i in range(0, len(words)):
+    words[i] = words[i].rstrip()
 wordOn = [-1]
 pw = input("Enter your password: ")
 start = time.time()
 #adds numbers if the bare dictionary attack isn't working
 number = []
 attempts = 0
-unsolved = true
+unsolved = True
 while unsolved:
+    attempts += 1
     wordOn[len(wordOn) - 1] += 1
-    for i in reversed(range(1, len(wordOn)):
+    for i in reversed(range(1, len(wordOn))):
         if wordOn[i] > len(words):
             wordOn[i] = 0
             wordOn[i - 1] += 1
@@ -21,7 +24,8 @@ while unsolved:
     
     attempt = ""
     for i in range (0, len(wordOn) - 1):
-        attempt += wordOn[i]
+        attempt += words[wordOn[i]]
     
     if attempt == pw:
-        print("Your password \"" + attempt + "\" has been found! It took " + str(attempts) + " attempts and ")
+        print("Your password \"" + attempt + "\" has been found! It took " + str(attempts) + " attempts and " + str(round(time.time() - start), 2)) + " seconds."
+        unsolved = False
