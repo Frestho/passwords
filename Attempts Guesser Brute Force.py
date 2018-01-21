@@ -1,13 +1,15 @@
 import math
 charOn = []
 mode = -1
-while not (mode == "" or mode == "0" or mode == "1"):
-    mode = input("Select the mode you want to test. Nothing for all lowercase, 0 for all case letters + numbers, and 1 for all characters: ")
+while not (mode == "" or mode == "0" or mode == "1" or mode == "2"):
+    mode = input("Select the mode you want to test. Nothing for all lowercase, 0 for numbers, 1 for all case letters + numbers, and 2 for all characters: ")
     if mode == "":
         chars = "aoeuidhtnspyfgcrlqjkxbmwvz"
     if mode == "0":
-        chars = "aoeuidhtnspyfgcrlqjkxbmwvzAOEUIDHTNSPYFGCRLQJKXBMWVZ1234567890"
+        chars = "1234567890"
     if mode == "1":
+        chars = "aoeuidhtnspyfgcrlqjkxbmwvzAOEUIDHTNSPYFGCRLQJKXBMWVZ1234567890"
+    if mode == "2":
         chars = "aoeuidhtnspyfgcrlqjkxbmwvzAOEUIDHTNSPYFGCRLQJKXBMWVZ1234567890~!@#$%^&*()_+`-=[]\;',./{}|:\"<>?"
 pw = input("Enter your password here: ")
 attempts = 0
