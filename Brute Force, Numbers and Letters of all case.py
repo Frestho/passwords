@@ -2,7 +2,7 @@ import time
 pw = input("Enter your password: ")
 start = time.time()
 cracked = False #state of password cracking
-chars = "qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890" #all the characters the the program will try
+chars = "aoeuidhtnspyfgcrlqjkxbmwvzAOEUIDHTNSPYFGCRLQJKXBMWVZ1234567890" #all the characters the the program will try
 charOn = [-1] #holds all the character values
 attempts = 0
 while not cracked:
