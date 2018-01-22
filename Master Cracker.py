@@ -116,4 +116,6 @@ dictionary(10000)#also short attack, guesses all one-word all-lowercase password
 bruteForce("1234567890", 13245678)#number passwords are not very common but hey, it doesn't take long to grind through 13245678 attempts
 bruteForce("aoeuidhtnspyfgcrlqjkxbmwvz1234567890", 10000000)#common password format
 combo(99, 1000000)
-bruteForce()
+bruteForce("aoeuidhtnspyfgcrlqjkxbmwvzAOEUIDHTNSPYFGCRLQJKXBMWVZ1234567890~!@#$%^&*()_+`-=[]\;',./{}|:\"<>?", 100000000)
+dictioary(10000000)
+          
