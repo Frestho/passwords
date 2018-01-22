@@ -1,5 +1,7 @@
 import time
-words = open(words.txt).split()
+words = open("words.txt").readlines()
+for i in range(0, len(words)):
+    words[i] = words[i].rstrip()
 wordOn = [-1]
 pw = input("Enter your password: ")
 start = time.time()
